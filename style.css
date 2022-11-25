@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root {
+    --error-color: rgb(249, 33, 33);
+    --success-color: rgb(51, 234, 10);
+    --main-color: rgb(62, 60, 60);
+    --basic-color: rebeccapurple;
+    --title-size: 22px;
+    --label-size: 14px;
+    --input-text-size: 16px;
+    --weight: 600;
+    --color: rgb(204, 255, 200);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+body {
+    color: rebeccapurple;
+    font-size: var(--label-size);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: rgb(100, green, blue);
+    font-weight: var(--weight);
+    background-color: rebeccapurple;
+}
+
+.container {
+    background-color: #ffffff;
+    display: flex;
+    height: 90%;
+    width: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    border-radius: 5px;
+    transform: translateY(-400%);
+    transition: transform 2s ease;
+    z-index: 3;
+}
+
+.container.show {
+    transform: translateY(0);
+}
+
+.form, .form-div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-div {
+    width: 100%;
+}
+
+.form {
+    width: 90%;
+}
+
+.input {
+    width: 100%;
+    height: 30px;
+    border: 2px solid var(--basic-color);
+    padding-left: 10px;
+}
+
+.small {
+    visibility: hidden;
+}
+
+.form-div.error .small {
+    visibility: visible;
+    color: var(--error-color);
+}
+
+.form-div.error .input{
+    border-color: var(--error-color);
+}
+
+.form-div.success .input {
+    border-color: var(--success-color);
+}
+
+.form .btn {
+    height: 40px;
+    border: 0;
+    outline: 0;
+    background-color: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+}
+
+.form .btn, .form-div .input {
+    border-radius: 5px;
+    
+}
+
+.form .btn:active {
+    transform: scale(0.99);
+}
+
+.start-btn {
+    background-color: #ffffff;
+    border: 0;
+    opacity: 1;
+    border-radius: 5px;
+    height: 40px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    height: 52px;
+    width: 150px;
+    color: inherit;
+    position: absolute;
+    transition: opacity 0.7s ease-out;
+}
+
+.start-btn:active {
+    transform: scale(0.98);
+}
+
+.start-btn:focus {
+    outline: none;
+}
+
+.start-btn.disable {
+    opacity: 0;
+}

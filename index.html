@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Form Validation</title>
+</head>
+<body>
+    <button class="start-btn">
+        Sign In
+    </button>
+    <div class="container">
+        <h1 class="title">Validating Web Forms</h1>
+        <form class="form">
+            <div class="form-div">
+                <label class="label" for="first-name">First Name</label>
+                <input class="input" id="first-name" type="text">
+                <small class="small">Error</small>
+            </div>
+            <div class="form-div">
+                <label class="label" for="last-name">Last Name</label>
+                <input class="input" id="last-name" type="text">
+                <small class="small">Error</small>
+            </div>
+             <div class="form-div">
+                <label class="label" for="email">Email</label>
+                <input class="input" id="email" type="email">
+                <small class="small">Error</small>
+             </div>
+            <div class="form-div">
+                <label class="label" for="password">Password</label>
+                <input class="input" id="password" type="password" autocomplete="new-password">
+                <small class="small">Error</small>
+            </div>
+            <div class="form-div">
+                <label class="label" for="bio">Your Bio</label>
+                <input class="input" id="bio" type="text">
+                <small class="small">Error</small>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+<script src="/script.js"></script>
+</body>
+</html>
